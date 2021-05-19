@@ -52,7 +52,7 @@ function setup() {
     letter.parent(letter_holder)
   
   // 하이퍼링크
-  a = createA('https://open.kakao.com/o/ga8k01dd', '>> 진짜 무료 도전을 수락하려면 여기로 <<');
+  a = createA('https://open.kakao.com/o/ga8k01dd', '>> 진짜 무료 도전을 수락하려는 김동민이라면 여기로 <<');
   a.parent(letter_holder)
   a.hide()
 }
