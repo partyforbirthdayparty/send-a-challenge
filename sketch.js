@@ -8,8 +8,9 @@ let a_challenge;
 
 function preload(){
   // 영상 불러오기
-  video_owl = createVideo(['Assets/fight3.mp4'], videoLoaded);
-  video_owl.onended(owlArrived)
+  // video_owl = createVideo(['Assets/fight3.mp4'], videoLoaded);
+  video_owl = document.querySelector('#video-owl')
+  video_owl.onended = owlArrived
   // 이미지 element 미리 만들어서 숨겨두기
   for(let i=0; i<4; i++){
     letters[i] = createImg('Assets/challenge2x-'+(i+1)+'.png', '도전장')
@@ -60,31 +61,31 @@ function setup() {
 
 function draw() {
   // 로딩 중
-  if(!is_ready_to_interact){
-    background(0)
-    fill(255)
-    textAlign(CENTER, CENTER)
-    text("loading...", width/2, height/2)
-  }
-  else if(is_ready_to_interact & not_played_yet){
-    background(30)
-    fill(255)
-    textSize(12)
-    text("시작하려면 화면을 누르세요\n(소리가 있으니 소리를 켜고 눌러주세요)", width/2, height/2)
-    if(mouseIsPressed){
-      video_owl.play(1)
-      not_played_yet = false
-    }
-  }
-  else{
-    if (video_owl)
-    image(video_owl, 0, 0, width, height); // 캔버스에 비디오 프레임 그리기
+  // if(!is_ready_to_interact){
+  //   background(0)
+  //   fill(255)
+  //   textAlign(CENTER, CENTER)
+  //   text("loading...", width/2, height/2)
+  // }
+  // else if(is_ready_to_interact & not_played_yet){
+  //   background(30)
+  //   fill(255)
+  //   textSize(12)
+  //   text("시작하려면 화면을 누르세요\n(소리가 있으니 소리를 켜고 눌러주세요)", width/2, height/2)
+  //   if(mouseIsPressed){
+  //     video_owl.play(1)
+  //     not_played_yet = false
+  //   }
+  // }
+  // else{
+    // if (video_owl)
+    // image(video_owl, 0, 0, width, height); // 캔버스에 비디오 프레임 그리기
     if(is_letter_arrived){ 
       textAlign(CENTER, CENTER)
       textSize(30)
       text("⬇", width/2, height/2)
     }
-  }
+  // }
   
     
   
