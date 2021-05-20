@@ -8,7 +8,7 @@ let a_challenge;
 
 function preload(){
   // 영상 불러오기
-  video_owl = createVideo(['Assets/fight2_2.mp4'], videoLoaded);
+  video_owl = createVideo(['Assets/fight3.mp4'], videoLoaded);
   video_owl.onended(owlArrived)
   // 이미지 element 미리 만들어서 숨겨두기
   for(let i=0; i<4; i++){
